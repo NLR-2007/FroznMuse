@@ -1,0 +1,188 @@
+/* FroznMuse - shared styles (same look as before, now responsive) */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 8px;
+  font-family: "Times New Roman", Times, serif;
+  color: #000;
+  background: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Logo */
+.logo {
+  margin-top: 20px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  width: 172px;
+}
+
+/* Navigation */
+.nav {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 20px;
+}
+
+.nav a {
+  padding: 4px 0;
+}
+
+.nav a.current {
+  font-weight: bold;
+}
+
+/* Headings and text */
+h1 {
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+.tagline {
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.section-title {
+  font-size: 20px;
+  margin: 24px 0;
+}
+
+.section-title q {
+  font-style: italic;
+}
+
+/* Red buttons */
+.btn {
+  display: inline-block;
+  font-size: 20px;
+  background-color: red;
+  color: #fff;
+  padding: 15px 35px 15px 25px;
+  margin: 10px 0 20px;
+}
+
+/* Flavour photos */
+.flavours {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 24px 0;
+}
+
+.flavours img {
+  width: 250px;
+  height: 280px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Video - keeps 16:9 and shrinks on small screens */
+.video {
+  max-width: 960px;
+  margin: 20px auto;
+  aspect-ratio: 16 / 9;
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Contact bar */
+.contact-bar {
+  background-color: red;
+  font-size: 30px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.contact-bar a {
+  color: #fff;
+}
+
+/* About page lists */
+.flavour-list {
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.flavour-list h3 {
+  font-size: 19px;
+  font-weight: normal;
+  margin: 20px 0 0;
+}
+
+.flavour-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flavour-list li::before {
+  content: "- ";
+}
+
+/* Services page */
+.services {
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.services h3 {
+  font-size: 19px;
+  font-weight: normal;
+  margin: 12px 0 4px;
+}
+
+.services p {
+  margin: 0 0 12px;
+}
+
+footer p {
+  font-size: 20px;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .tagline,
+  .flavour-list,
+  .services {
+    font-size: 17px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  .contact-bar {
+    font-size: 24px;
+  }
+
+  .flavours img {
+    width: 100%;
+    max-width: 320px;
+  }
+}
